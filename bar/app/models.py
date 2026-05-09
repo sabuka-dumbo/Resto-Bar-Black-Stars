@@ -60,6 +60,7 @@ class Meal(models.Model):
     is_vegan = models.BooleanField(default=False)
     is_available = models.BooleanField(default=True)
     calories = models.IntegerField(null=True, blank=True)
+    count = models.IntegerField(default=0)
     
     def __str__(self):
         return f"{self.name} - ${self.price}"
