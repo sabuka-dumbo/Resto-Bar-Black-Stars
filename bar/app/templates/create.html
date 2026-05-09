@@ -1,0 +1,156 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/create.css' %}">
+{% endblock %}
+
+{% block body %}
+    <div class="page-wrapper">
+        <header class="hero-header animate-fade-in">
+            <span class="eyebrow">Bespoke Gastronomy</span>
+            <h1>Create Your Lunch Box</h1>
+            <p>Select from our chef-curated components to build a nutritional masterpiece tailored to your palate.</p>
+        </header>
+
+        <div class="layout-grid">
+            <main class="builder-sections">
+                
+                <section class="menu-step animate-slide-up" style="animation-delay: 0.1s;">
+                    <div class="step-header">
+                        <h2>1. The Protein Anchor</h2>
+                        <span class="step-instruction">PICK ONE</span>
+                    </div>
+                    <div class="card-grid protein-grid">
+                        <article class="food-card" data-category="protein" data-id="p1" data-price="8" data-kcal="320" data-weight="200" data-name="Miso Glazed Salmon" data-img="https://images.unsplash.com/photo-1485921325833-c519f76c4927?auto=format&fit=crop&w=400&q=80">
+                            <div class="card-img-wrapper"><img src="https://images.unsplash.com/photo-1485921325833-c519f76c4927?auto=format&fit=crop&w=400&q=80" alt="Salmon"></div>
+                            <div class="card-content">
+                                <div class="card-title-row">
+                                    <h3>Miso Glazed Salmon</h3>
+                                    <span class="price">+$8</span>
+                                </div>
+                                <p class="card-desc">Sustainably sourced, honey-miso glaze, sesame seeds. (320 kcal)</p>
+                                <div class="tags"><span class="tag">OMEGA-3</span><span class="tag">GLUTEN-FREE</span></div>
+                            </div>
+                            <div class="check-indicator">✓</div>
+                        </article>
+
+                        <article class="food-card" data-category="protein" data-id="p2" data-price="12" data-kcal="410" data-weight="250" data-name="Truffle Roast Beef" data-img="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=400&q=80">
+                            <div class="card-img-wrapper"><img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=400&q=80" alt="Roast Beef"></div>
+                            <div class="card-content">
+                                <div class="card-title-row">
+                                    <h3>Truffle Roast Beef</h3>
+                                    <span class="price">+$12</span>
+                                </div>
+                                <p class="card-desc">Grass-fed Angus, shaved black truffle, aged balsamic. (410 kcal)</p>
+                                <div class="tags"><span class="tag">HIGH PROTEIN</span></div>
+                            </div>
+                            <div class="check-indicator">✓</div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="menu-step animate-slide-up" style="animation-delay: 0.2s;">
+                    <div class="step-header">
+                        <h2>2. Garnish & Grain</h2>
+                        <span class="step-instruction">PICK TWO</span>
+                    </div>
+                    <div class="card-grid garnish-grid">
+                        <article class="food-card small-card" data-category="garnish" data-id="g1" data-price="0" data-kcal="85" data-weight="100" data-name="Herbed Quinoa" data-img="https://images.unsplash.com/photo-1515543237350-b3eea1ec8082?auto=format&fit=crop&w=300&q=80">
+                            <div class="card-img-wrapper"><img src="https://images.unsplash.com/photo-1515543237350-b3eea1ec8082?auto=format&fit=crop&w=300&q=80" alt="Quinoa"></div>
+                            <div class="card-content">
+                                <h3>Herbed Quinoa</h3>
+                                <p class="card-desc">85 kcal</p>
+                            </div>
+                            <div class="check-indicator">✓</div>
+                        </article>
+
+                        <article class="food-card small-card" data-category="garnish" data-id="g2" data-price="0" data-kcal="45" data-weight="80" data-name="Charred Asparagus" data-img="https://images.unsplash.com/photo-1550304943-4f24f54ddde9?auto=format&fit=crop&w=300&q=80">
+                            <div class="card-img-wrapper"><img src="https://images.unsplash.com/photo-1519996521430-02b798c1d881?auto=format&fit=crop&w=300&q=80" alt="Asparagus"></div>
+                            <div class="card-content">
+                                <h3>Charred Asparagus</h3>
+                                <p class="card-desc">45 kcal</p>
+                            </div>
+                            <div class="check-indicator">✓</div>
+                        </article>
+
+                        <article class="food-card small-card" data-category="garnish" data-id="g3" data-price="0" data-kcal="110" data-weight="120" data-name="Cauliflower Purée" data-img="https://images.unsplash.com/photo-1604152135912-04a022e23696?auto=format&fit=crop&w=300&q=80">
+                            <div class="card-img-wrapper"><img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=300&q=80" alt="Cauliflower"></div>
+                            <div class="card-content">
+                                <h3>Cauliflower Purée</h3>
+                                <p class="card-desc">110 kcal</p>
+                            </div>
+                            <div class="check-indicator">✓</div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="menu-step animate-slide-up" style="animation-delay: 0.3s;">
+                    <div class="step-header">
+                        <h2>3. Artisanal Refreshments</h2>
+                        <span class="step-instruction">OPTIONAL</span>
+                    </div>
+                    <div class="card-grid drink-grid">
+                        <article class="food-card mini-card" data-category="drink" data-id="d1" data-price="4" data-kcal="20" data-weight="250" data-name="Cucumber & Mint Infusion" data-img="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=300&q=80">
+                            <div class="card-img-wrapper"><img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=300&q=80" alt="Cucumber Drink"></div>
+                            <div class="card-content">
+                                <h3>Cucumber & Mint Infusion</h3>
+                                <div class="card-footer">
+                                    <span class="price">$4</span>
+                                    <div class="add-icon">+</div>
+                                </div>
+                            </div>
+                            <div class="check-indicator">✓</div>
+                        </article>
+
+                        <article class="food-card mini-card" data-category="drink" data-id="d2" data-price="8" data-kcal="45" data-weight="250" data-name="Cold Pressed Hibiscus" data-img="https://images.unsplash.com/photo-1497534446932-c925b458314e?auto=format&fit=crop&w=300&q=80">
+                            <div class="card-img-wrapper"><img src="https://images.unsplash.com/photo-1497534446932-c925b458314e?auto=format&fit=crop&w=300&q=80" alt="Hibiscus Drink"></div>
+                            <div class="card-content">
+                                <h3>Cold Pressed Hibiscus</h3>
+                                <div class="card-footer">
+                                    <span class="price">$8</span>
+                                    <div class="add-icon">+</div>
+                                </div>
+                            </div>
+                            <div class="check-indicator">✓</div>
+                        </article>
+                    </div>
+                </section>
+            </main>
+
+            <aside class="summary-wrapper animate-slide-up" style="animation-delay: 0.4s;">
+                <div class="summary-panel">
+                    <h2 class="panel-title">Your Lunch Box</h2>
+                    
+                    <div class="box-slots">
+                        <div class="slot" id="slot-protein"></div>
+                        <div class="slot" id="slot-garnish-1"></div>
+                        <div class="slot empty-slot" id="slot-garnish-2">+</div>
+                        <div class="slot" id="slot-drink"></div>
+                        <div class="floating-total" id="floatingTotal">$0.00</div>
+                    </div>
+
+                    <div class="receipt-list" id="receiptList">
+                        <div class="empty-receipt">Your box is empty. Select components to begin.</div>
+                    </div>
+
+                    <div class="box-metrics">
+                        <div class="metric">
+                            <span class="metric-label">NUTRITIONAL VALUE</span>
+                            <span class="metric-value" id="totalKcal">0 kcal</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">WEIGHT</span>
+                            <span class="metric-value" id="totalWeight">0g</span>
+                        </div>
+                    </div>
+
+                    <button class="btn-checkout" id="btnCheckout" disabled>Confirm Selection and Add to Cart</button>
+                    <p class="delivery-note">FREE EXPRESS DELIVERY FOR CURATED BOXES</p>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <script src="{% static 'js/create.js' %}"></script>
+{% endblock %}

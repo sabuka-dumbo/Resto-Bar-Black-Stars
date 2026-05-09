@@ -1,0 +1,152 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+
+{% block body %}
+<header class="hero">
+        <div class="hero-content animate-up">
+            <h1>Choose Your<br><span>Business Lunch</span></h1>
+            <p>Elevating the corporate dining experience with curated seasonal ingredients and chef-driven recipes delivered to your office.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="date-section animate-up" style="animation-delay: 0.2s;">
+            <div class="section-title">Select Delivery Date</div>
+            <div class="date-grid">
+                <div class="date-card active">
+                    <div class="date-day">Mon</div>
+                    <div class="date-num">12</div>
+                    <div class="date-month">Oct</div>
+                </div>
+                <div class="date-card">
+                    <div class="date-day">Tue</div>
+                    <div class="date-num">13</div>
+                    <div class="date-month">Oct</div>
+                </div>
+                <div class="date-card">
+                    <div class="date-day">Wed</div>
+                    <div class="date-num">14</div>
+                    <div class="date-month">Oct</div>
+                </div>
+                <div class="date-card">
+                    <div class="date-day">Thu</div>
+                    <div class="date-num">15</div>
+                    <div class="date-month">Oct</div>
+                </div>
+                <div class="date-card">
+                    <div class="date-day">Fri</div>
+                    <div class="date-num">16</div>
+                    <div class="date-month">Oct</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="category animate-up" style="animation-delay: 0.3s;">
+            <h2>Soups</h2>
+            <div class="grid">
+                <article class="card" data-price="85" data-id="1">
+                    <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=600&q=80" alt="Tomato Soup" class="card-img">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <div class="card-title">Velvet Tomato & Basil</div>
+                            <span class="badge">250 KCAL</span>
+                        </div>
+                        <p class="card-desc">Slow-roasted San Marzano tomatoes, infused with fresh basil and topped with a light cream drizzle.</p>
+                        <div class="card-footer">
+                            <span class="price">85 MDL</span>
+                            <button class="btn-select">Select</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="card" data-price="95" data-id="2">
+                    <img src="https://images.unsplash.com/photo-1604152135912-04a022e23696?auto=format&fit=crop&w=600&q=80" alt="Onion Soup" class="card-img">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <div class="card-title">Traditional Onion</div>
+                            <span class="badge">320 KCAL</span>
+                        </div>
+                        <p class="card-desc">Caramelized onions in a rich beef broth, served with a Gruyère cheese gratin crust.</p>
+                        <div class="card-footer">
+                            <span class="price">95 MDL</span>
+                            <button class="btn-select">Select</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="category animate-up" style="animation-delay: 0.4s;">
+            <h2>Main Courses</h2>
+            <div class="grid">
+                <article class="card" data-price="245" data-id="3">
+                    <img src="https://images.unsplash.com/photo-1485921325833-c519f76c4927?auto=format&fit=crop&w=600&q=80" alt="Salmon" class="card-img">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <div class="card-title">Glazed Atlantic Salmon</div>
+                            <span class="badge">480 KCAL</span>
+                        </div>
+                        <p class="card-desc">Miso-glazed salmon served with wild rice pilaf, charred asparagus, and a delicate ginger-soy reduction.</p>
+                        <div class="card-footer">
+                            <span class="price">245 MDL</span>
+                            <button class="btn-select">Select</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="card" data-price="165" data-id="4">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80" alt="Buddha Bowl" class="card-img">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <div class="card-title">Golden Buddha Bowl</div>
+                            <span class="badge">410 KCAL</span>
+                        </div>
+                        <p class="card-desc">Quinoa base, turmeric-roasted cauliflower, tahini dressing, and fresh pomegranate.</p>
+                        <div class="card-footer">
+                            <span class="price">165 MDL</span>
+                            <button class="btn-select">Select</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="category animate-up" style="animation-delay: 0.5s;">
+            <h2>Salads</h2>
+            <div class="grid">
+                <article class="card" data-price="110" data-id="5">
+                    <img src="https://images.unsplash.com/photo-1550304943-4f24f54ddde9?auto=format&fit=crop&w=600&q=80" alt="Caesar Salad" class="card-img">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <div class="card-title">Classic Caesar</div>
+                            <span class="badge">350 KCAL</span>
+                        </div>
+                        <p class="card-desc">Hearts of romaine, aged Parmesan, sourdough crisps, and house-made creamy dressing.</p>
+                        <div class="card-footer">
+                            <span class="price">110 MDL</span>
+                            <button class="btn-select">Select</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <div class="sticky-cart" id="stickyCart">
+        <div class="cart-summary">
+            <span>Order Summary</span>
+            <div>
+                <span class="cart-total" id="cartTotal">0 MDL</span>
+                <span class="cart-total-items" id="cartCount">/ 0 Items Selected</span>
+            </div>
+        </div>
+        <div class="cart-actions">
+            <button class="btn-clear" id="btnClear">Clear Choices</button>
+            <button class="btn-cart" id="btnAddToCart">Add to Cart</button>
+        </div>
+    </div>
+
+    <script src="{% static 'js/index.js' %}"></script>
+{% endblock %}

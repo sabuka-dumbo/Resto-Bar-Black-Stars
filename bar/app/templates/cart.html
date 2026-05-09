@@ -1,0 +1,77 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/cart.css' %}">
+{% endblock %}
+
+{% block body %}
+<main class="cart-wrapper">
+    <div class="cart-main">
+        <h2 class="cart-title">Your Selection</h2>
+        
+        <div id="cart-items">
+            <div class="cart-item-card" data-base-price="42.00">
+                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=300" class="item-visual">
+                <div class="item-core">
+                    <div class="item-top-row">
+                        <h3>Truffle Roast Beef Lunch Box</h3>
+                        <button class="item-delete" onclick="removeItem(this)">
+                            <span class="material-symbols-outlined">close</span>
+                        </button>
+                    </div>
+                    <p class="item-description">Charred Asparagus, Cold Pressed Hibiscus</p>
+                    <div class="item-bottom-row">
+                        <div class="qty-pill">
+                            <button class="qty-act" onclick="changeQty(this, -1)">−</button>
+                            <span class="qty-display">1</span>
+                            <button class="qty-act" onclick="changeQty(this, 1)">+</button>
+                        </div>
+                        <h1 class="item-total-price">$42.00</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="upsell-heading">Complete Your Experience</h3>
+        <div class="upsell-flex">
+            <div class="upsell-item">
+                <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=150">
+                <div class="upsell-content">
+                    <h4>Sparkling Yuzu</h4>
+                    <div class="upsell-bottom">
+                        <span>$12.00</span>
+                        <button class="upsell-add-btn">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <aside class="cart-summary-panel">
+        <div class="summary-sticky">
+            <h3 class="summary-header">Order Totals</h3>
+            <div class="summary-stat"><span>Subtotal</span><span id="sub-val">$42.00</span></div>
+            <div class="summary-stat"><span>Premium Delivery</span><span>$15.00</span></div>
+            <div class="summary-stat"><span>Tax</span><span id="tax-val">$3.36</span></div>
+            
+            <div class="summary-final">
+                <span>Total</span>
+                <span id="grand-val">$60.36</span>
+            </div>
+
+            <div class="promo-wrap">
+                <input type="text" placeholder="Promo Code">
+                <button>APPLY</button>
+            </div>
+
+            <textarea class="kitchen-msg" placeholder="Kitchen notes..."></textarea>
+
+            <button class="main-checkout-btn">Proceed to Checkout</button>
+            <div class="secure-footer">🔒 Secure B2B Checkout</div>
+        </div>
+    </aside>
+</main>
+
+    <script src="{% static 'js/cart.js' %}"></script>
+{% endblock %}

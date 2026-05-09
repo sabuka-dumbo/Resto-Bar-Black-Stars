@@ -1,0 +1,67 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/daily.css' %}">
+{% endblock %}
+
+{% block body %}
+    <main class="specials-container">
+        <header class="specials-header">
+            <span class="date-tag">Saturday, April 25</span>
+            <h1 class="specials-main-title">Chef’s Daily <span class="gold-text">Editorial.</span></h1>
+            <p class="specials-intro">Hand-selected ingredients at their absolute peak. Available today only.</p>
+        </header>
+
+        <div class="specials-grid">
+            <div class="special-card featured">
+                <div class="special-badge">Limited Quantity</div>
+                <img src="https://blog.swiggy.com/wp-content/uploads/2025/01/Image-9_-meat-burger-1024x538.png" alt="Special 1" class="special-img">
+                <div class="special-info">
+                    <div class="info-top">
+                        <h3>Pan-Seared Duck Breast</h3>
+                        <span class="special-price">315 MDL</span>
+                    </div>
+                    <p>Served with a cherry-port reduction, parsnip purée, and honey-glazed baby carrots.</p>
+                    <div class="special-footer">
+                        <div class="nutrition-tags">
+                            <span>420 kcal</span>
+                            <span>High Protein</span>
+                        </div>
+                        <button class="special-add-btn">Add to Box</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="special-card">
+                <img src="https://images.unsplash.com/photo-1546793665-c74683f339c1?q=80&w=800" alt="Special 2" class="special-img">
+                <div class="special-info">
+                    <div class="info-top">
+                        <h3>Heirloom Tomato Salad</h3>
+                        <span class="special-price">145 MDL</span>
+                    </div>
+                    <p>Burrata, aged balsamic, and micro-basil from our local urban garden.</p>
+                    <div class="special-footer">
+                        <button class="special-add-btn">Add to Box</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="special-card">
+                <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=800" alt="Special 3" class="special-img">
+                <div class="special-info">
+                    <div class="info-top">
+                        <h3>Blackened Sea Bass</h3>
+                        <span class="special-price">285 MDL</span>
+                    </div>
+                    <p>With a lemon-caper butter sauce and wilted spinach.</p>
+                    <div class="special-footer">
+                        <button class="special-add-btn">Add to Box</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="{% static 'js/daily.js' %}"></script>
+{% endblock %}

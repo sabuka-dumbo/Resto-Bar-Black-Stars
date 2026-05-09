@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/story.css' %}">
+{% endblock %}
+
+{% block body %}
+    <main class="story-wrapper">
+        <section class="story-hero">
+            <span class="hero-label">Our Heritage</span>
+            <h1 class="hero-main-title">A Symphony of <span class="text-gradient">Taste & Precision.</span></h1>
+        </section>
+
+        <div class="story-grid-layout">
+            <article class="story-text-block">
+                <h2>The Beginning</h2>
+                <p>We started with a single conviction: that corporate dining shouldn't feel like a compromise. The Culinary Editorial was established to bridge the gap between high-stakes productivity and high-end gastronomy.</p>
+                <p>Our kitchen is a lab where seasonal ingredients meet culinary discipline. We don't just cook; we curate. Every lunch box is a reflection of our commitment to excellence, designed to fuel the most ambitious teams in the world.</p>
+            </article>
+
+            <div class="story-visual-card">
+                <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=800" alt="Chef hands">
+                <div class="card-overlay"></div>
+            </div>
+
+            <div class="story-visual-card accent-card">
+                <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=800" alt="Ingredients">
+            </div>
+
+            <article class="story-text-block">
+                <h2>Our Philosophy</h2>
+                <p>We operate on an "Editorial" model. We filter out the noise to bring you only the peak of the season. No filler, no mediocrity—only curated perfection delivered to your workspace.</p>
+                <button class="story-cta">View Today's Menu</button>
+            </article>
+        </div>
+    </main>
+
+    <script src="{% static 'js/story.js' %}"></script>
+{% endblock %}
