@@ -115,22 +115,24 @@
 
         <section class="category animate-up" style="animation-delay: 0.5s;">
             <h2>Salads</h2>
+            {% for meal in meals %}
             <div class="grid">
-                <article class="card" data-price="110" data-id="5">
-                    <img src="https://images.unsplash.com/photo-1550304943-4f24f54ddde9?auto=format&fit=crop&w=600&q=80" alt="Caesar Salad" class="card-img">
+                <article class="card" data-price="{{ meal.price }}" data-id="{{ meal.id }}">
+                    <img src="{{ meal.image.url }}" alt="{{ meal.name }}" class="card-img">
                     <div class="card-content">
                         <div class="card-header">
-                            <div class="card-title">Classic Caesar</div>
-                            <span class="badge">350 KCAL</span>
+                            <div class="card-title">{{ meal.name }}</div>
+                            <span class="badge">{{ meal.calories }} KCAL</span>
                         </div>
-                        <p class="card-desc">Hearts of romaine, aged Parmesan, sourdough crisps, and house-made creamy dressing.</p>
+                        <p class="card-desc">{{ meal.description }}</p>
                         <div class="card-footer">
-                            <span class="price">110 MDL</span>
+                            <span class="price">{{ meal.price }} GEL</span>
                             <button class="btn-select">Select</button>
                         </div>
                     </div>
                 </article>
             </div>
+            {% endfor %}
         </section>
     </main>
 
