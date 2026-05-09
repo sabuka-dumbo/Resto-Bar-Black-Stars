@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from flask import json
 
 # Create your models here.
 class User(AbstractUser):
@@ -55,13 +56,19 @@ class Meal(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     image = models.ImageField(upload_to='meals/', blank=True, null=True)
     ingredients = models.TextField()
-    allergens = models.JSONField(default=list)
     is_vegetarian = models.BooleanField(default=False)
     is_vegan = models.BooleanField(default=False)
     is_available = models.BooleanField(default=True)
     calories = models.IntegerField(null=True, blank=True)
     count = models.IntegerField(default=0)
+    allergens_json = models.TextField(help_text="JSON-formatted list of allergens", default='[]')
     
+    def set_allergens(self, data):
+        self.allergens_json = json.dumps(data)
+
+    def get_allergens(self):
+        return json.loads(self.allergens_json)
+
     def __str__(self):
         return f"{self.name} - ${self.price}"
 
