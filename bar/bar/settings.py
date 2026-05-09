@@ -80,7 +80,7 @@ DATABASES = {
         'USER': 'neondb_owner',
         'PASSWORD': 'npg_EAMU4fQL2Sip',
         'HOST': 'ep-small-hat-ale7qlod-pooler.c-3.eu-central-1.aws.neon.tech',
-        'PORT': '5432', # Default PostgreSQL port
+        'PORT': '5432',
         'OPTIONS': {
             'sslmode': 'require',
         },
