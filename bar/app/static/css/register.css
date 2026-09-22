@@ -1,0 +1,14 @@
+body {
+    background-color: black;
+}
+
+footer {
+    display: none;
+}
+
+main {
+    width: 100%;
+    height: calc(100vh - 128px);
+    background-color: aqua;
+    padding: 64px;
+}
