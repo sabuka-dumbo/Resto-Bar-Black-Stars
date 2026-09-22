@@ -23,18 +23,33 @@
                 <a href="{% url 'story' %}" class="nav-link {% if request.resolver_match.url_name == 'story' %}active{% endif %}">Our Story</a>
             </div>
             
+            {% if request.user.is_authenticated %}
             <div class="nav-icons-wrapper">
-            <a href="{% url 'cart' %}" style="text-decoration: none; color: inherit;">
-                <button class="icon-btn" aria-label="Cart">
-                    <span class="material-symbols-outlined">shopping_cart</span>
-                </button>
-            </a>
-            <a href="{% url 'profile' %}" style="text-decoration: none; color: inherit;">
-                <button class="icon-btn" aria-label="Profile">
-                    <span class="material-symbols-outlined">person</span>
-                </button>
-            </a>
+                <a href="{% url 'cart' %}" style="text-decoration: none; color: inherit;">
+                    <button class="icon-btn" aria-label="Cart">
+                        <span class="material-symbols-outlined">shopping_cart</span>
+                    </button>
+                </a>
+                <a href="{% url 'profile' %}" style="text-decoration: none; color: inherit;">
+                    <button class="icon-btn" aria-label="Profile">
+                        <span class="material-symbols-outlined">person</span>
+                    </button>
+                </a>
             </div>
+            {% else %}
+            <div class="nav-icons-wrapper">
+                <a href="{% url 'register' %}" style="text-decoration: none; color: inherit;">
+                    <button class="icon-btn" aria-label="Cart">
+                        <span class="material-symbols-outlined">shopping_cart</span>
+                    </button>
+                </a>
+                <a href="{% url 'register' %}" style="text-decoration: none; color: inherit;">
+                    <button class="icon-btn" aria-label="Profile">
+                        <span class="material-symbols-outlined">person</span>
+                    </button>
+                </a>
+            </div>
+            {% endif %}
         </div>
 
         <button class="icon-btn menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
